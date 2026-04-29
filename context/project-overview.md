@@ -648,6 +648,16 @@ Rendered as a highlighted note.
 - **Markdown-first** - The rendered page should reflect the source content accurately
 - **Low clutter** - Avoid excessive dashboards or admin complexity in MVP
 
+### Screenshots
+
+Refer to the screenshots below as a base for the dashboard UI. It does not have to be exact. Use it as a reference:
+
+- @context/screenshots/dashboard-ui-main.png
+- @context/screenshots/ui-dsa-track-topic-view.png
+- @context/screenshots/ui-dsa-track-view.png
+- @context/screenshots/ui-markdown-preview.png
+- @context/screenshots/ui-github-sync-view.png
+
 ---
 
 ### Layout Structure
