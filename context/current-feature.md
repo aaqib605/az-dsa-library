@@ -16,4 +16,4 @@
 
 ## History
 
-<!-- Keep this updated. Earliest to latest -->
+- Initial project setup. Added project context docs, coding/AI interaction guidance, a placeholder app landing page, and removed default Next.js starter assets/content.
