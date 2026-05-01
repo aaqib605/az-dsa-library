@@ -14,7 +14,7 @@ interface NavItem {
 const navItems: NavItem[] = [
   {
     label: "Tracks",
-    href: "/",
+    href: "/dashboard",
     icon: (
       <svg
         aria-hidden="true"
@@ -31,7 +31,10 @@ const navItems: NavItem[] = [
         <path d="M8 11h6" />
       </svg>
     ),
-    isActive: (pathname) => pathname === "/" || pathname.startsWith("/tracks"),
+    isActive: (pathname) =>
+      pathname === "/" ||
+      pathname === "/dashboard" ||
+      pathname.startsWith("/tracks"),
   },
   {
     label: "Preview",
@@ -85,7 +88,7 @@ function BrandMark() {
     <Link
       aria-label="DSA Library home"
       className="group flex items-center gap-2.5"
-      href="/"
+      href="/dashboard"
     >
       <span className="flex h-7 w-7 items-center justify-center rounded border border-emerald-400/35 bg-emerald-400/10 text-emerald-300 transition-colors group-hover:border-emerald-300/55 group-hover:bg-emerald-400/15">
         <svg
