@@ -146,7 +146,7 @@ function TopicCard({ topic }: { topic: DashboardTopic }) {
   return (
     <Link
       className="group grid gap-4 rounded-lg border border-slate-800 bg-slate-950 p-4 transition-colors hover:border-slate-700 hover:bg-slate-900/70 md:grid-cols-[56px_minmax(0,1fr)_auto]"
-      href={`/tracks/${topic.trackSlug}/${topic.slug}`}
+      href={`/tracks/${topic.trackSlug}/topics/${topic.slug}`}
     >
       <div className="flex h-10 w-10 items-center justify-center rounded-md border border-slate-800 bg-slate-900 font-mono text-sm text-slate-500 group-hover:text-slate-300">
         {String(topic.orderIndex).padStart(2, "0")}
