@@ -1,5 +1,6 @@
 "use client";
 
+import { BookOpen, Code2, FileText, GitBranch, Menu, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -15,22 +16,7 @@ const navItems: NavItem[] = [
   {
     label: "Tracks",
     href: "/dashboard",
-    icon: (
-      <svg
-        aria-hidden="true"
-        className="h-4 w-4"
-        fill="none"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="1.8"
-        viewBox="0 0 24 24"
-      >
-        <path d="M4 19.5V5.75A2.75 2.75 0 0 1 6.75 3H20v16H6.5A2.5 2.5 0 0 0 4 21.5" />
-        <path d="M8 7h8" />
-        <path d="M8 11h6" />
-      </svg>
-    ),
+    icon: <BookOpen aria-hidden="true" className="h-4 w-4" strokeWidth={1.8} />,
     isActive: (pathname) =>
       pathname === "/" ||
       pathname === "/dashboard" ||
@@ -39,47 +25,14 @@ const navItems: NavItem[] = [
   {
     label: "Preview",
     href: "/preview",
-    icon: (
-      <svg
-        aria-hidden="true"
-        className="h-4 w-4"
-        fill="none"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="1.8"
-        viewBox="0 0 24 24"
-      >
-        <path d="M14 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7z" />
-        <path d="M14 2v5h5" />
-        <path d="M9 13h6" />
-        <path d="M9 17h4" />
-      </svg>
-    ),
+    icon: <FileText aria-hidden="true" className="h-4 w-4" strokeWidth={1.8} />,
     isActive: (pathname) => pathname.startsWith("/preview"),
   },
   {
     label: "Sync",
-    href: "/admin/sync",
-    icon: (
-      <svg
-        aria-hidden="true"
-        className="h-4 w-4"
-        fill="none"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="1.8"
-        viewBox="0 0 24 24"
-      >
-        <path d="M18 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
-        <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
-        <path d="M6 22a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
-        <path d="M8.6 6.5 15.4 11.5" />
-        <path d="M15.4 14.5 8.6 19.5" />
-      </svg>
-    ),
-    isActive: (pathname) => pathname.startsWith("/admin/sync"),
+    href: "/sync",
+    icon: <GitBranch aria-hidden="true" className="h-4 w-4" strokeWidth={1.8} />,
+    isActive: (pathname) => pathname.startsWith("/sync"),
   },
 ];
 
@@ -91,20 +44,7 @@ function BrandMark() {
       href="/dashboard"
     >
       <span className="flex h-7 w-7 items-center justify-center rounded border border-emerald-400/35 bg-emerald-400/10 text-emerald-300 transition-colors group-hover:border-emerald-300/55 group-hover:bg-emerald-400/15">
-        <svg
-          aria-hidden="true"
-          className="h-4 w-4"
-          fill="none"
-          stroke="currentColor"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="1.9"
-          viewBox="0 0 24 24"
-        >
-          <path d="m8 9-4 3 4 3" />
-          <path d="m16 9 4 3-4 3" />
-          <path d="m14 5-4 14" />
-        </svg>
+        <Code2 aria-hidden="true" className="h-4 w-4" strokeWidth={1.9} />
       </span>
       <span className="font-mono text-sm font-semibold tracking-normal text-slate-100">
         dsa<span className="text-slate-500">.</span>
@@ -172,29 +112,11 @@ export function DashboardNavbar() {
           onClick={() => setMobileMenuOpen((open) => !open)}
           type="button"
         >
-          <svg
-            aria-hidden="true"
-            className="h-4 w-4"
-            fill="none"
-            stroke="currentColor"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-          >
-            {mobileMenuOpen ? (
-              <>
-                <path d="M18 6 6 18" />
-                <path d="m6 6 12 12" />
-              </>
-            ) : (
-              <>
-                <path d="M4 7h16" />
-                <path d="M4 12h16" />
-                <path d="M4 17h16" />
-              </>
-            )}
-          </svg>
+          {mobileMenuOpen ? (
+            <X aria-hidden="true" className="h-4 w-4" strokeWidth={2} />
+          ) : (
+            <Menu aria-hidden="true" className="h-4 w-4" strokeWidth={2} />
+          )}
         </button>
       </div>
 
