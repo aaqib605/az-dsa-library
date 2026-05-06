@@ -16,6 +16,7 @@
 
 ## History
 
+- Completed Markdown Renderer Library Upgrade. Replaced the custom regex parser on `/preview` with `react-markdown`, added GFM support, sanitized rendering, KaTeX-backed math rendering, preserved the dark preview styling, and imported KaTeX CSS globally.
 - Completed Markdown Renderer Page. Added the `/preview` route with a dark live markdown editor, mock sample content, local preview rendering for common markdown structures, and a full-height scrollable source panel.
 - Completed Topic View Rendering. Added dynamic topic detail routes with mock explanation content, video readiness cards, quiz review blocks, practice links, parent-track navigation, sibling topic navigation, and responsive reviewer rails.
 - Completed Track Detail Pages. Added reusable mock-data driven track detail routes for Beginner, Intermediate, and Advanced DSA with track headers, topic cards, metadata, status badges, and empty-state support.
